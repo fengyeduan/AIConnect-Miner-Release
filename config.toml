@@ -1,0 +1,46 @@
+[service]
+base_url = "http://sequencer.heurist.xyz"
+llm_url = "http://localhost"
+signal_url = "https://d2k7cjzmjgpm6p.cloudfront.net/prod"
+sd_timeout_seconds = 22
+llm_timeout_seconds = 210
+
+[logging]
+sd_log_filename = "sd-miner.log"
+llm_log_filename = "llm-miner.log"
+
+[versions]
+sd_version = "sd-v1.3.0"
+llm_version = "llm-v1.1.1"
+
+[storage]
+s3_bucket = 'heurist-images'
+base_dir = "~/.cache/heurist"
+keys_dir = "~/.heurist-keys"
+
+[model_config]
+model_config_url = "https://raw.githubusercontent.com/heurist-network/heurist-models/main/models.json"
+vae_config_url = "https://raw.githubusercontent.com/heurist-network/heurist-models/main/vae.json"
+lora_config_url = "https://raw.githubusercontent.com/heurist-network/heurist-models/main/lora.json"
+default_sd_model_index = 1
+
+[system]
+# Make sure to increase num_cuda_devices for SD miner if your machine has multiple GPUs
+num_cuda_devices = 1
+# Number of children processes is only applicable to LLM miner
+num_child_process = 4
+sleep_duration = 2
+min_deadline = 1
+reload_interval = 600
+signal_interval = 600
+
+[processing_limits]
+max_iterations = 50
+max_width = 1024
+max_height = 1024
+# Limit on the concurrent requests for LLM miner. Actual running requests may go over. Higher concurrency results in higher throughput but longer latency
+concurrency_soft_limit = 5
+
+[contract]
+rpc = "https://sepolia.era.zksync.dev/"
+address = "0x7798de1aE119b76037299F9B063e39760D530C10"
