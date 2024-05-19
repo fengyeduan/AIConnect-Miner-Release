@@ -5,7 +5,7 @@ Welcome to the AIConnect Miner setup guide. This document is designed to help yo
 
 AIConnect Miner allows users to contribute to the AIConnect network by performing AI inference tasks in exchange for rewards. This guide will take you through the necessary steps to set up your mining operation.
 
-For curious readers to learn more about the hardware requirements for AI inference, read [AIConnect's Guide to AI article](https://AIConnectai.medium.com/AIConnects-guide-to-ai-beginner-s-series-part-2-db77458a62dd).
+
 
 ##  Quick Start Guide
 
@@ -21,7 +21,7 @@ For those eager to dive in, here's a quick overview of the setup process:
 
 ## ⚠️ Important Notices
 
-- **Preview Version**: You're working with a preview version of the AIConnect Miner. Expect some bumps along the way. For assistance, join [AIConnect Discord #miner-chat channel]( https://discord.com/invite/AIConnectai)
+- **Preview Version**: You're working with a preview version of the AIConnect Miner.
 - **System Requirements**: Advanced users may skip steps they've already completed, but compatibility checks are recommended.
 - **CUDA Compatibility**: CUDA versions 12.1 or 12.2 are advised for compatibility with PyTorch.
 
