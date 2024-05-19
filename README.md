@@ -40,9 +40,6 @@ To prevent impersonation, every miner should have a pair of wallets.
 
 - Reward wallet (Miner ID): It is the wallet to receive points. It may hold NFT to boost the rewards. The address is shared publicly.
 
-We use a Soul-Bound Token (SBT) to store 1:1 relationship between an identity wallet and a reward wallet. The SBT contract is currently active on the zkSync Era testnet and can be found at [here](https://sepolia.explorer.zksync.io/address/0x7798de1aE119b76037299F9B063e39760D530C10). It will be migrated to zkSync mainnet in the future. The identity-reward wallet binding is established automatically after your miner processes some jobs.
-
-Each miner request must be accompanied by a signature from the identity wallet to prevent unauthorized actions.
 
 ### Configuring Your Miner ID and Identity Wallet
 
